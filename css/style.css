@@ -1,0 +1,41 @@
+/* 2.2 Base + Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:16px; }
+body { font-family:'Helvetica Neue', Arial, sans-serif; font-size:1rem; line-height:1.7; letter-spacing:0.02em; color:#111; background:#f6f5f1; padding:0; margin:0; }
+
+/* 2.3 Typography */
+h1 { font-size:1.4rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:800; }
+h2 { font-size:2.5rem; line-height:1.2; font-weight:700; }
+h3 { font-size:1.2rem; font-weight:600; }
+p { font-size:0.95rem; }
+
+/* 2.4 Layout - Flex + Grid */
+header { display:flex; justify-content:space-between; align-items:center; padding:1em 5%; background:#111; color:#fff; }
+nav { display:flex; gap:1.5em; }
+nav a { color:#fff; text-decoration:none; text-transform:uppercase; font-size:0.85rem; letter-spacing:0.05em; }
+.cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:2%; padding:2em 5%; }
+.card { background:#fff; border:1px solid #ddd; padding:1em; box-shadow:0 2px 5px rgba(0,0,0,0.05); transition:0.3s; }
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:5em 5%; background:#111; color:#fff; }
+
+/* 2.5 Visual + pseudo classes */
+.card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+nav a:hover { color:#aaa; }
+nav a:focus { outline:2px solid #fff; }
+nav a:active { color:#666; }
+.btn { background:#fff; color:#111; padding:0.8em 1.5em; text-decoration:none; display:inline-block; margin-top:1em; }
+.btn:hover { background:#ddd; }
+
+/* 3.1 Breakpoints 3.2 Relative Units */
+@media (max-width: 1024px) { /* Tablet */
+.cards { grid-template-columns: repeat(2, 1fr); }
+h2 { font-size:2rem; }
+}
+@media (max-width: 600px) { /* Mobile */
+header { flex-direction:column; gap:1em; }
+nav { flex-direction:column; align-items:center; }
+.cards { grid-template-columns: 1fr; }
+h2 { font-size:1.6rem; }
+.hero { padding:3em 5%; }
+}
+footer { background:#111; color:#fff; text-align:center; padding:2%; margin-top:2em; font-size:0.8rem; }
+img { width:100%; height:auto; }
