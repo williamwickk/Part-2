@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+ <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop - VINTAGE-THREADS</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Vintage Threads | Authentic Vintage Denim & Designer Archive</title>
+<meta name="description" content="Vintage Threads sells authentic curated vintage denim and designer archive. Undercover, Dior, Hedi Slimane, Balenciaga Lost Tapes, Raf Simons, Number (N)ine.">
+<meta name="keywords" content="vintage threads, vintage denim, archive fashion, raf simons, number nine, undercover, hedi slimane, balenciaga, 90s vintage">
+<meta name="author" content="Vintage Threads">
+<link rel="stylesheet" href="css/style.css">   
+<meta name="description" content="Shop Vintage Threads - Rare 90s distressed denim, Balenciaga Lost Tapes, Raf Simons, Number Nine archive.">
+<meta name="keywords" content="shop vintage denim, archive shop, balenciaga, raf simons">
+<meta name="author" content="VINTAGE-THREADS">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <header>
+ <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search: denim, balenciaga, raf..." style="margin:20px; padding:10px; width:80%">
+<div id="lightbox" class="lightbox"><span class="close">&times;</span><img class="lightbox-content" id="lightbox-img"></div>   
 <h1>VINTAGE-THREADS</h1>
 <nav>
 <a href="index.html">Home</a>
@@ -54,3 +63,13 @@
 <p><strong>R2,200</strong></p>
 </div>
 </div>
+<h2>Shop Gallery</h2>
+<input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search vintage... e.g. denim, raf, number nine">
+
+<div class="gallery">
+<img src="images/vintage-90s-denim-jacket.jpg" alt="Vintage 90s denim jacket" class="gallery-img">
+<img src="images/number-nine-vintage-piece.jpg" alt="Number Nine vintage piece" class="gallery-img">
+<img src="images/raf-simons-vintage-tee.jpg" alt="Raf Simons vintage tee" class="gallery-img">
+<img src="images/vintage-longsleeve-tee.jpg" alt="Vintage longsleeve tee" class="gallery-img">
+</div>
+<div id="lightbox" class="lightbox"><span class="close">&times;</span><img class="lightbox-content" id="lightbox-img"></div>

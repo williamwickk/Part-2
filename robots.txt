@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://vintage-threads-poe.netlify.app/sitemap.xml
+
+

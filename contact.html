@@ -1,9 +1,93 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact - VINTAGE-THREADS</title><link rel="stylesheet" href="css/style.css"></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vintage Threads | Authentic Vintage Denim & Designer Archive</title>
+<meta name="description" content="Vintage Threads sells authentic curated vintage denim and designer archive. Undercover, Dior, Hedi Slimane, Balenciaga Lost Tapes, Raf Simons, Number (N)ine.">
+<meta name="keywords" content="vintage threads, vintage denim, archive fashion, raf simons, number nine, undercover, hedi slimane, balenciaga, 90s vintage">
+<meta name="author" content="Vintage Threads">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
 <body>
-<header><h1>VINTAGE-THREADS</h1><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a><a href="enquiry.html">Enquiry</a></nav></header>
-<section style="padding:3em 5%"><h2>Contact Us</h2><p>Email: archive@vintageswagg-threads.co.za or contact: 076 123 4657 | Johannesburg, South Africa</p></section>
-<footer>© 2026 VINTAGE-THREADS</footer>
-</body>
-</html>
+<header>
+<h1>VINTAGE-THREADS</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="shop.html">Shop</a>
+<a href="contact.html">Contact</a>
+<a href="enquiry.html">Enquiry</a>
+</nav>
+</header>
+
+<section style="padding:3em 5%">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Reach out to us!</p>
+    <p><strong>Email:</strong> info@vintage-threads.com</p>
+    <p><strong>Phone:</strong> +27 11 123 4567</p>
+    <p><strong>Address:</strong> 123 Fashion Street, Johannesburg, South Africa</p>
+
+    <div id="map" style="height: 300px; width: 100%; margin-top: 20px 0; border: 1px solid #ccc;"></div>
+    <h3>Send Us a Message</h3>
+    <form onsubmit="returnvalidateContact()"method="post" action="mailto:archive@vintageswagg-threads.co.za">
+        <label>FULL NAME</label><br>
+        <input type="text" id="cname" name="name" required><br><br>
+        <label>EMAIL</label><br>
+        <input type="email" id="cemail" name="email" required><br><br>
+        <label>PHONE</label><br>
+        <input type="tel" id="cphone" name="phone" placeholder="076 123 4567" required><br><br>
+        <label>MESSAGE type</label><br>
+        <select id="ctype" name="type"></select>
+            <option value="general">General question</option>
+            <option value="order">book a viewing</option>
+            <option value="feedback">order status</option>
+            <option value="collab">collaboration opportunity</option>
+        </select><br><br>
+
+        <p>Preferred Contact Method:</p>
+        <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+        <label>
+            <input type="radio" id="via-whatsapp" name="contactMethod" value="whatsapp">
+            <label for="via-whatsapp">WhatsApp</label><br><br>
+        
+            <label>Message:</label><br>
+            <textarea id="cmessage" name="message" rows="5" cols="40" required></textarea><br><br>
+
+            <input type="checkbox" id="cnewsletter" name="newsletter">
+            <label for="cnewsletter">Subscribe to vintage threads drops</label><br><br>
+
+            <span id="contactError" style="color: red; font-weight: bold;"></span><br><span id="cSuccess" style="color: green; font-weight: bold; display: none;"> Thank you! Your message has been sent to Vintage Threads.</span><br>
+            <input type="submit" value="Send Message">
+        </form>
+        </section>
+
+        <footer>© 2026 VINTAGE-THREADS Archive - Johannesburg</footer>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            var map = L.map('map').setView([-26.2041, 28.0473], 13); // Johannesburg coordinates
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([-26.2041, 28.0473]).addTo(map)
+                .bindPopup('VINTAGE-THREADS<br>123 Fashion Street, Johannesburg')
+                .openPopup();
+                </script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+<script>
+var map = L.map('map').setView([-26.2041, 28.0473], 13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+attribution: '&copy; OpenStreetMap &copy; CARTO',
+maxZoom: 19
+}).addTo(map);
+L.marker([-26.2041, 28.0473]).addTo(map)
+.bindPopup("VINTAGE-THREADS<br>123 Fashion Street, Johannesburg").openPopup();
+setTimeout(() => { map.invalidateSize(); }, 300);
+</script>
+        </body> 
+        </html>
